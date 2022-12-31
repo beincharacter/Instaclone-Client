@@ -1,0 +1,71 @@
+.login-container {
+    height: 100vh;
+    background-image: url("https://polywork-production.imgix.net/8dk1f5b8pps5catpa4uslzfn4u6h?ixlib=rails-4.2.0&w=1500&auto=format&dpr=5&q=20");
+    background-size: cover;
+    background-repeat:   no-repeat;
+    background-position: center;
+}
+
+.login-container > .login-box {
+    height: 70vh;
+    width: 30vw;
+    margin: 0 auto;
+    border-radius: 25px;
+    /* background-color: rgb(227, 227, 157); */
+    
+}
+
+.login-container > .login-box > .signin-header {
+    height: 60px;
+    /* background-color: aqua; */
+}
+
+.login-container > .login-box > .input-box {
+    display: block;
+    /* text-align: center; */
+    padding: 0 45px;
+    height: 130px;
+}
+
+.login-container > .login-box > .input-box > .input {
+    height: 50%;
+}
+
+.login-container > .login-box > .input-box > .input:first-child {
+    height: 50%;
+    margin-top: 50px;
+
+}
+
+.login-container > .login-box > .input-box > .input > input {
+    height: 25px;
+    width: 80%;
+    padding-left: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background: transparent;
+}
+
+.login-container > .login-box > .input-box > button {
+    height: 25px;
+    width: 100px;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-left: 5px;
+    background: transparent;
+}
+
+.login-container > .login-box > .input-box > button:hover {
+    cursor: pointer;
+    background-color: white;
+    color: rgb(12, 11, 11);
+}
+
+.sign-up {
+    text-decoration: underline;
+}
+
+.sign-up:hover {
+    cursor: pointer;
+    color: red;
+}

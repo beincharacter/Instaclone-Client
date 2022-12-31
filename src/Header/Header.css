@@ -1,0 +1,24 @@
+.login-header {
+    display: flex;
+    height: 10vh;
+    width: 100vw;
+}
+
+.border {
+    border: 1.5px solid black;
+}
+
+.logo {
+    height: 100%;
+    width: 15vw;
+}
+
+.serach-box {
+    height: 100%;
+    width: 50vw;
+}
+
+.nav-box {
+    height: 100%;
+    width: 35vw;
+}
