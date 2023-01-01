@@ -1,9 +1,6 @@
 .main-page-container {
-    height: 100vh;
-    background-image: url("https://wallup.net/wp-content/uploads/2018/09/26/447660-texture-abstract-background-colors.jpg");
-    background-size: cover;
-    background-repeat:   no-repeat;
-    background-position: center;
+    /* height: 100vh; */
+    background-color: blanchedalmond;
 }
 
 .main-page-container > .main-page-box {
@@ -56,4 +53,14 @@
 .cursor:hover {
     cursor: pointer;
     color: black;
+}
+
+.post-box > .image-box {
+    background-color: brown;
+}
+
+.post-box > .image-box > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
