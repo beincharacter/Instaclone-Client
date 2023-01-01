@@ -51,7 +51,9 @@ export function MainPage() {
                                     <span className="edit-delete-btn cursor">...</span>
                                 </div>
                             </div>
-                            <div className="image-box">{data.image}</div>
+                            <div className="image-box">
+                                <img src={data.image} alt="cover" />    
+                            </div>
                         </div>
                         </>
                     )
