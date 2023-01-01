@@ -1,4 +1,4 @@
-.login-container {
+.registeration-container {
     height: 100vh;
     background-image: url("https://polywork-production.imgix.net/8dk1f5b8pps5catpa4uslzfn4u6h?ixlib=rails-4.2.0&w=1500&auto=format&dpr=5&q=20");
     background-size: cover;
@@ -6,7 +6,8 @@
     background-position: center;
 }
 
-.login-container > .login-box {
+
+.registeration-container > .registeration-box {
     height: 70vh;
     width: 30vw;
     margin: 0 auto;
@@ -15,40 +16,37 @@
     
 }
 
-.login-container > .login-box > .signin-header {
+.registeration-container > .registeration-box > .signup-header {
     height: 60px;
     /* background-color: aqua; */
 }
 
-.login-container > .login-box > .input-box {
+.registeration-container > .registeration-box > .input-box {
     display: block;
     /* text-align: center; */
     padding: 0 45px;
-    height: 130px;
+    /* height: 130px; */
 }
 
-.login-container > .login-box > .input-box > .input {
-    height: 50%;
+.registeration-container > .registeration-box > .input-box > .input {
+    /* height: 50%; */
+    padding-bottom: 8px;
 }
 
-.login-container > .login-box > .input-box > .input:first-child {
-    height: 50%;
-    margin-top: 50px;
-
+.registeration-container > .registeration-box > .input-box > .input:first-child {
+    margin-top: 30px;
 }
 
-.login-container > .login-box > .input-box > .input > input {
+.registeration-container > .registeration-box > .input-box > .input > input {
     height: 25px;
     width: 80%;
     padding-left: 10px;
     border: 1px solid black;
-    /* border: none; */
-    box-decoration-break: clone;
     /* border-radius: 5px; */
     background: transparent;
 }
 
-.login-container > .login-box > .input-box > button {
+.registeration-container > .registeration-box > .input-box > button {
     height: 25px;
     width: 100px;
     /* border-radius: 5px; */
@@ -57,31 +55,8 @@
     background: transparent;
 }
 
-.login-container > .login-box > .input-box > button:hover {
+.registeration-container > .registeration-box > .input-box > button:hover {
     cursor: pointer;
     background-color: white;
     color: rgb(12, 11, 11);
-}
-
-.sign-up {
-    text-decoration: underline;
-}
-
-.sign-up:hover {
-    cursor: pointer;
-    color: red;
-}
-
-input[type= 'text'] {
-    outline: 0ch;
-}
-
-.hide-icon {
-    /* background-color: aqua; */
-    display: inline-block;
-    position: relative;
-    top: 3px;
-    height: 30px;
-    width: 30px;
-    text-align: center;
 }

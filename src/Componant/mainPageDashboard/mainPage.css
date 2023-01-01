@@ -1,0 +1,59 @@
+.main-page-container {
+    height: 100vh;
+    background-image: url("https://wallup.net/wp-content/uploads/2018/09/26/447660-texture-abstract-background-colors.jpg");
+    background-size: cover;
+    background-repeat:   no-repeat;
+    background-position: center;
+}
+
+.main-page-container > .main-page-box {
+    /* background-color: aquamarine; */
+    border: 1px solid black;
+    height: 600px;
+    margin: 0 300px;
+}
+
+.main-page-container > .main-page-box > .no-data {
+    background-color: aqua;
+}
+
+.post-box > .post-header {
+    display: flex;
+    background-color: rgba(212, 84, 84, 0.638);
+    border: 1px solid black;
+    height: 30px;
+}
+
+.post-box > .post-header > .post-image {
+    height: 100%;
+    width: 30px;
+    /* background-color: blueviolet; */
+}
+
+.post-box > .post-header > .user-details {
+    width: 680px;
+    padding-left: 7px;
+}
+
+.post-box > .post-header > .user-details > .user-name {
+    display: block;
+    font-size: small;
+    font-weight: bold;
+    height: 30%;
+}
+
+.post-box > .post-header > .user-details > .user-location {
+    font-size: x-small;
+}
+
+.post-box > .post-header > .edit-delete {
+    width: 30px;
+    /* background-color: blue; */
+    text-align: center;
+    font-weight: bolder;
+    color: white;
+}
+.cursor:hover {
+    cursor: pointer;
+    color: black;
+}
