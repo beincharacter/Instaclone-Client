@@ -4,7 +4,8 @@ import { LoginHeader } from "../Header/Header";
 import { FaEye, FaEyeSlash } from 'react-icons/fa'
 import './Registeration.css'
 import { useState } from "react";
-const API = 'http://localhost:9000'
+// const API = 'http://localhost:9000'
+const API = 'https://instaserver-ze4o.onrender.com'
 
 export function Register() {
     const navigate = useNavigate();
