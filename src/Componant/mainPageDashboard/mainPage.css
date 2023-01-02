@@ -1,13 +1,8 @@
-.main-page-container {
-    /* height: 100vh; */
-    /* background-color: blanchedalmond; */
-}
-
 .main-page-container > .main-page-box {
     /* background-color: aquamarine; */
     border: 1px solid black;
     /* height: 600px; */
-    margin: 0 400px;
+    margin: 0 300px;
 }
 
 .main-page-container > .main-page-box > .no-data {

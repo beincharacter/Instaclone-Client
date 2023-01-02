@@ -4,7 +4,8 @@ import { LoginHeader } from "../Header/Header";
 import { useNavigate } from "react-router-dom"
 import { FaEye, FaEyeSlash } from 'react-icons/fa'
 import { useState } from "react";
-const API = 'http://localhost:9000/'
+// const API = 'http://localhost:9000/' 
+const API = 'https://instaserver-ze4o.onrender.com' 
 
 
 export default function Login() {
@@ -19,7 +20,7 @@ export default function Login() {
         e.preventDefault();
         console.log("in handelsubmit");
 
-        await fetch(`${API}login`, {
+        await fetch(`${API}/login`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

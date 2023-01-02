@@ -5,7 +5,8 @@ import { useNavigate } from "react-router-dom";
 import { MainHeader } from "../../Header/Header";
 import { FaHeart, FaTelegramPlane, FaUserCircle } from 'react-icons/fa'
 import './mainPage.css';
-const API = 'http://localhost:9000'
+// const API = 'http://localhost:9000'
+const API = 'https://instaserver-ze4o.onrender.com'
 
 export function MainPage() {
     const navigate = useNavigate();
