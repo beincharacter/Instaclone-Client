@@ -30,8 +30,8 @@ export function MainHeader() {
             <div className="main-serach-box"></div>
             <div className="nav-box">
                 <nav className="navbar">
-                    <span className="nav">Home</span>
-                    <span className="nav">Create</span>
+                    <span className="nav" onClick={(e) => navigate('/posts')}>Home</span>
+                    <span className="nav" onClick={(e) => navigate('/createpost')}>Create</span>
                     <span className="nav logout" onClick={(e) => logout()}>logout</span>
                 </nav>
             </div>

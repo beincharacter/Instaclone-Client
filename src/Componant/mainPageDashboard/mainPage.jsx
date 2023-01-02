@@ -3,13 +3,14 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { MainHeader } from "../../Header/Header";
-import { FaUserCircle } from 'react-icons/fa'
+import { FaHeart, FaTelegramPlane, FaUserCircle } from 'react-icons/fa'
 import './mainPage.css';
 const API = 'http://localhost:9000'
 
 export function MainPage() {
     const navigate = useNavigate();
     const [postsData, setPostsData] = useState([]);
+    const [comment, addComment] = useState([]);
     console.log(postsData)
 
     useEffect(() => {
@@ -54,10 +55,23 @@ export function MainPage() {
                             <div className="image-box">
                                 <img src={data.image} alt="cover" />    
                             </div>
+                            <div className="reaction-box">
+                                <span className="like-btn" style={{paddingLeft: '10px'}}><FaHeart  /></span>
+                                <span className="share-btn" style={{paddingLeft: "5px"}}><FaTelegramPlane/></span>
+                                <span className="date" style={{float: "right", paddingRight: "5px"}}>{data.date}</span>
+                                <div style={{marginLeft: '14px'}}>{data.description}</div>
+                                <span className="comment-box" style={{display: "block"}}>
+                                    <input type="text" style={{width: '90%'}} placeholder="comment here" onChange={(e) => addComment(e.target.value)} />
+                                </span>
+                                    {/* {comment} */}
+                            </div>
+                            <br />
+                            <hr />
                         </div>
                         </>
                     )
-                })}
+                }).reverse()
+                }
             </div>
         </div>
         </>
