@@ -63,6 +63,6 @@
 input[type= "text"] {
     border: none;
     border-bottom: 1px solid rgba(63, 49, 49, 0.452);
-    margin-left: 15px;
+    /* margin-left: 15px; */
     margin-bottom: 3px;
 }

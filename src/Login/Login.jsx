@@ -4,6 +4,7 @@ import { LoginHeader } from "../Header/Header";
 import { useNavigate } from "react-router-dom"
 import { FaEye, FaEyeSlash } from 'react-icons/fa'
 import { useState } from "react";
+import loader from '../loader.gif'
 // const API = 'http://localhost:9000/' 
 const API = 'https://instaserver-ze4o.onrender.com' 
 
@@ -12,11 +13,13 @@ export default function Login() {
     const navigate = useNavigate();
     const [loginData, setLoginData] = useState({username: '', password: ''});
     const [hidden, setHidden] = useState(true);
+    const [isLoading, setIsLoading] = useState(false)
     const [emailErr, setEmailErr] = useState('');
     const [passErr, setPassErr] = useState('');
-    console.log(loginData);
+    // console.log(loginData);
 
     const handelsubmit = async (e) => {
+        setIsLoading(true)
         e.preventDefault();
         console.log("in handelsubmit");
 
@@ -30,7 +33,8 @@ export default function Login() {
             .then(res => {
                 return res.json();
             }).then(data => {
-                console.log(data);
+                setIsLoading(false);
+                // console.log(data);
                 if(data.message === 'email/phone not exists') setEmailErr(data.message);
                 else if (data.message === 'invalid password') setPassErr(data.message);
                 else {
@@ -44,8 +48,9 @@ export default function Login() {
 
     return (
         <>
-        <section className="login-container">
-            <LoginHeader/>
+            {/* <LoginHeader/> */}
+        <section className="login-container center">
+            {isLoading ? <img className="loader" src={loader} alt='loading' /> : '' }
             <div className="login-box border">
                 <div className="signin-header ">
                     <p style={{fontSize: "1.1em", float: "left", marginLeft: "19px"}}>
@@ -53,7 +58,7 @@ export default function Login() {
                     </p>
                 </div>
 
-                <form className="input-box" onSubmit={(e) => handelsubmit(e)} >
+                <form className="input-box center" onSubmit={(e) => handelsubmit(e)} >
                     <div className="input">
                         <input type="text" placeholder="username"
                         value={loginData.username}
@@ -67,13 +72,13 @@ export default function Login() {
                         onChange={(e) => setLoginData({...loginData, password: e.target.value})}
                         /> 
                         <span className="hide-icon">
-                            {hidden ? <FaEye onClick={() => setHidden(false)}/> 
-                            : <FaEyeSlash onClick={() => setHidden(true)}/> }
+                            {hidden ? <FaEye className="fa-eye" onClick={() => setHidden(false)}/> 
+                            : <FaEyeSlash className="fa-eye" onClick={() => setHidden(true)}/> }
                         </span> <br/>
                         <span style={{color: "red"}}>{passErr}</span>
                     </div>
-                    <button type="submit">Login</button>
-                    <p>Need to <span className="sign-up" onClick={() => navigate('/register')}>
+                    <button className="btn" type="submit">Login</button>
+                    <p  className="sign-up">Need to <span className="sign-up" onClick={() => navigate('/register')}>
                         SignUp
                         </span>
                     </p>
