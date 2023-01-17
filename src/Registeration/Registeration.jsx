@@ -4,6 +4,7 @@ import { LoginHeader } from "../Header/Header";
 import { FaEye, FaEyeSlash } from 'react-icons/fa'
 import './Registeration.css'
 import { useState } from "react";
+import loader from '../loader.gif'
 // const API = 'http://localhost:9000'
 const API = 'https://instaserver-ze4o.onrender.com'
 
@@ -12,11 +13,13 @@ export function Register() {
     const [registerationData, setRegisterationData] = useState({
         name: '', email: '', phone: '', password: '', state: '', city: '' });
     const [hidden, setHidden] = useState(true);
+    const [isLoading, setIsLoading] = useState(false)
     const [emailErr, setEmailErr] = useState('');
     const [phoneErr, setPhoneErr] = useState('');
     console.log("data: " + JSON.stringify(registerationData));
 
     const handelsubmit = async (e) => {
+        setIsLoading(true);
         e.preventDefault();
         console.log("in handelsubmit");
 
@@ -30,6 +33,7 @@ export function Register() {
             .then(res => {
                 return res.json();
             }).then(data => {
+                setIsLoading(false);
                 console.log(data);
                 if(data.message == 'email already exist!') setEmailErr(data.message);
                 else if (data.message == "phone already exist!") setPhoneErr(data.message);
@@ -42,8 +46,9 @@ export function Register() {
     }
     return (
         <>
-        <section className="registeration-container">
-            <LoginHeader/>
+        <section className="registeration-container center">
+            {isLoading ? <img className="loader" src={loader} alt='loading' /> : '' }
+            {/* <LoginHeader/> */}
             <div className="registeration-box border">
                 <div className="signup-header ">
                     <p style={{fontSize: "1.1em", float: "left", marginLeft: "19px"}}>
@@ -51,7 +56,7 @@ export function Register() {
                     </p>
                 </div>
 
-                <form className="input-box" onSubmit={(e) => handelsubmit(e)} >
+                <form className="input-box center" onSubmit={(e) => handelsubmit(e)} >
                     <div className="input">
                         <input type="text"  placeholder="name" 
                         value={registerationData.name}

@@ -32,6 +32,7 @@
     display: flex;
     align-items: center;
     padding-left: 17%;
+    padding-top: 18%;
     font-size: x-large;
     height: 90px;
 }
@@ -52,7 +53,7 @@
 
 input[type= 'text'],
 input[type= 'password'] {
-    width: 100%;
+    width: 96.6%;
     height: 100%;
     font-size: medium;
     background-color: transparent;
@@ -60,7 +61,12 @@ input[type= 'password'] {
     border-bottom: .8px solid rgb(43, 40, 40);
 }
 
-
+.fa-eye {
+    position: absolute;
+    top: 51.9%;
+    left: 57.3%;
+    cursor: pointer;
+}
 
 .login-container > .login-box > .input-box > button {
     border: 1px solid black;
@@ -83,10 +89,6 @@ input[type= 'password'] {
     color: red;
 }
 
-.loader {
-    position: absolute;
-    height: 90px;
-}
 
 @media only screen and (max-width: 600px) {
     .login-container > .login-box {
@@ -98,52 +100,7 @@ input[type= 'password'] {
 
     .fa-eye {
         position: absolute;
-        top: 53.4%;
-        left: 73.3%;
-    }
-}
-
-@media only screen and (min-width: 600px) and (max-width: 768px) {
-    .login-container > .login-box {
-        display: flex;
-        flex-direction: column;
-        height: 70vh;
-        width: 80vw;
-    }
-
-    .fa-eye {
-        position: absolute;
-        top: 53.4%;
-        left: 71%;
-    }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 900px) {
-    .login-container > .login-box {
-        display: flex;
-        flex-direction: column;
-        height: 70vh;
-        width: 70vw;
-    }
-
-    .fa-eye {
-        position: absolute;
-        top: 53.4%;
-        left: 68.5%;
-    }
-}
-
-@media only screen and (min-width: 900px) {
-    .login-container > .login-box {
-        display: flex;
-        flex-direction: column;
-        height: 70vh;
-        width: 60vw;
-    }
-
-    .fa-eye {
-        position: absolute;
-        top: 53.4%;
-        left: 66.5%;
+        top: 55.4%;
+        left: 72%;
     }
 }
